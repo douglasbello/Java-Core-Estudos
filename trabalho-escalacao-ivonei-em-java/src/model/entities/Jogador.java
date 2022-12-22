@@ -1,19 +1,28 @@
-package entities;
+package model.entities;
+
+import model.enums.JogadorStatus;
 
 public class Jogador {
     private String numero;
     private String nomeJogador;
     private String posicao;
-    private String situacao = "NORMAL";
+    private JogadorStatus situacao;
     private boolean participouPartida = false;
 
-    public Jogador() {
-
-    }
-    public Jogador(String numero,String nomeJogador,String posicao) {
+    public Jogador(String numero,String nomeJogador,String posicao,JogadorStatus status)
+    {
         this.numero = numero;
         this.nomeJogador = nomeJogador;
         this.posicao = posicao;
+        this.situacao = status;
+    }
+    public Jogador(String numero,String nomeJogador,String posicao,JogadorStatus status,boolean participouPartida)
+    {
+        this.numero = numero;
+        this.nomeJogador = nomeJogador;
+        this.posicao = posicao;
+        this.situacao = status;
+        this.participouPartida = participouPartida;
     }
 
     public String getNumero() {
@@ -40,11 +49,11 @@ public class Jogador {
         this.posicao = posicao;
     }
 
-    public String getSituacao() {
+    public JogadorStatus getSituacao() {
         return situacao;
     }
 
-    public void setSituacao(String situacao) {
+    public void setSituacao(JogadorStatus situacao) {
         this.situacao = situacao;
     }
 
