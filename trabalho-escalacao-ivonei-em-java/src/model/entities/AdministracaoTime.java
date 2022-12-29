@@ -161,7 +161,8 @@ public class AdministracaoTime {
             io2.printStackTrace();
         }
         File filee = new File("C:\\Users\\napst\\IdeaProjects\\trabalho-escalacao-ivonei-em-java\\src\\application\\todosjogadores.txt");
-        try (Scanner filereader = new Scanner(filee)) {
+        try (Scanner filereader = new Scanner(filee))
+        {
             while (filereader.hasNextLine()) {
                 System.out.println(filereader.nextLine());
             }
